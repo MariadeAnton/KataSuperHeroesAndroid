@@ -77,9 +77,6 @@ import static org.mockito.Mockito.when;
     onView(withId(R.id.recycler_view)).check(matches(recyclerViewHasItemCount(10)));
   }
 
-    Recycler
-  }
-
   private void givenThereAreNoSuperHeroes() {
     when(repository.getAll()).thenReturn(Collections.<SuperHero>emptyList());
   }
