@@ -65,15 +65,11 @@ import static org.mockito.Mockito.when;
     onView(withText("¯\\_(ツ)_/¯")).check(matches(isDisplayed()));
   }
 
-  @Test public void noShowEmptyCaseIfThereAreSuperHeroes (){
-    givenThereAreNoSuperHeroes(10,false);
-    startActivity();
-    onView(withText("¯\\_(ツ)_/¯")).check(matches(not(isDisplayed())));
-  }
-
   @Test public void showNumberOfSuperHeroes(){
     givenThereAreNoSuperHeroes(10);
+
     startActivity();
+    
     onView(withId(R.id.recycler_view)).check(matches(recyclerViewHasItemCount(10)));
   }
 
