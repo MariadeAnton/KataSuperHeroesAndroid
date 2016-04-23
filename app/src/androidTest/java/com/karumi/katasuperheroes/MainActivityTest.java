@@ -71,7 +71,13 @@ import static org.mockito.Mockito.when;
     onView(withText("¯\\_(ツ)_/¯")).check(matches(not(isDisplayed())));
   }
 
-    Recycler  
+  @Test public void showNumberOfSuperHeroes(){
+    givenThereAreNoSuperHeroes(10);
+    startActivity();
+    onView(withId(R.id.recycler_view)).check(matches(recyclerViewHasItemCount(10)));
+  }
+
+    Recycler
   }
 
   private void givenThereAreNoSuperHeroes() {
